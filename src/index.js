@@ -1,19 +1,32 @@
 const express = require("express");
-const fs = require("fs");
+const app = express();
 const path = require("path");
 
-const app = express();
-const port = 8000;
-
+// builtin Middleware
 const staticPath = path.join(__dirname, "../public");
 
-// builtin middleware
-app.use(express.static(staticPath));
+// To set the view engine
+app.set("view engine", "hbs");
+
+app.get("", (req, res) => {
+  res.render("index.hbs");
+});
+// app.use(express.static(staticPath));
 
 app.get("/", (req, res) => {
-  res.send("Welcome to my home");
+  res.send("Hello world");
 });
 
-app.listen(port, () => {
-  console.log(`Listening to the ${port}`);
+app.get("/about", (req, res) => {
+  res.send("About us");
+});
+app.get("/contact", (req, res) => {
+  res.send("Contact us");
+});
+app.get("/temp", (req, res) => {
+  res.send("Temperature");
+});
+
+app.listen(8000, () => {
+  console.log("Listening to the port....");
 });

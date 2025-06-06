@@ -1,14 +1,23 @@
 {
-  "name": "expapp",
+  "name": "express",
   "version": "1.0.0",
-  "description": "\"express tut of youtube'",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Bibek",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bibek190/express.git"
+  },
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bibek190/express/issues"
+  },
+  "homepage": "https://github.com/bibek190/express#readme",
+  "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "hbs": "^4.2.0"
   }
 }
